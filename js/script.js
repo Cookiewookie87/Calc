@@ -24,8 +24,19 @@ let processArr = [];
 
 function displayClear () {
     processArr = [];
-    process.textContent = processArr;
+    process.textContent = 0;
     result.textContent = 0;
+}
+
+function operatorDisplay (operator) {
+    if (processArr.length === 0) {
+        processArr.push(0);
+        processArr.push(operator);
+        process.textContent = processArr.join("");
+    } else {
+        processArr.push(operator);
+        process.textContent = processArr.join("");
+    }
 }
 
 displayClear();
@@ -37,7 +48,8 @@ eql.addEventListener('click', function () {
 });
 
 del.addEventListener('click', function () {
-    
+    processArr.pop();
+    process.textContent = processArr.join("");
 });
 
 clear.addEventListener('click', function () {
@@ -45,8 +57,10 @@ clear.addEventListener('click', function () {
 });
 
 parR.addEventListener('click', function () {
-    processArr.push(")");
-    process.textContent = processArr.join("");
+    if (processArr.length !== 0){
+        processArr.push(")");
+        process.textContent = processArr.join("");
+    }
 });
 
 parL.addEventListener('click', function () {
@@ -55,33 +69,30 @@ parL.addEventListener('click', function () {
 });
 
 plus.addEventListener('click', function () {
-    processArr.push("+");
-    process.textContent = processArr.join("");
+    operatorDisplay("+")
 });
 
 divide.addEventListener('click', function () {
-    processArr.push("/");
-    process.textContent = processArr.join("");
+    operatorDisplay("/")
 });
 
 mul.addEventListener('click', function () {
-    processArr.push("*");
-    process.textContent = processArr.join("");
+    operatorDisplay("*")
 });
 
 minus.addEventListener('click', function () {
-    processArr.push("-");
-    process.textContent = processArr.join("");
+    operatorDisplay("-")
 });
 
 coln.addEventListener('click', function () {
-    processArr.push(".");
-    process.textContent = processArr.join("");
+    operatorDisplay(".")
 });
 
 zero.addEventListener('click', function () {
-    processArr.push(0);
-    process.textContent = processArr.join("");
+    if (processArr.length !== 0) {
+        processArr.push(0);
+        process.textContent = processArr.join("");
+    }
 });
 
 one.addEventListener('click', function () {
