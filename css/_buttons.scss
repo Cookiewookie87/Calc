@@ -1,0 +1,39 @@
+@mixin button-border {
+    border: {
+        top: none;
+        right: 1px solid $border-red;
+        bottom: 1px solid $border-red;
+        left: none;
+    }
+}
+
+.btn-wrap{
+    width: 240px;
+}
+button{
+    @include button-border();
+    @include type(); 
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    margin-right: -4px; /*To remove space between HTML button tags*/
+    background-color: $redish;
+    outline: none;
+}
+button:hover{
+    background-color: $hover-red;
+    cursor: pointer;
+}
+#eql{
+    background-color: $dark-red;
+}
+#eql:hover{
+    background-color: $eql-red-hover;
+}
+.fifth-row button{
+    border-bottom: none;
+}
+button:nth-last-child(1){
+    border-right: none;
+}

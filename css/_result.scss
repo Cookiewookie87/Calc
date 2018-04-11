@@ -1,0 +1,30 @@
+.display-wrap{
+    width: 240px;
+}
+#process{
+    @include type();
+    color: $dark-red;
+    background-color: $white;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: right;
+    padding: 0 25px;
+    
+}
+#result{
+    @include type();
+    color: $dark-red;
+    background-color: $white;
+    text-align: center;
+    height: 60px;
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: right;
+    padding: 5px 25px 0 25px;
+}
