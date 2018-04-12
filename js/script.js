@@ -18,14 +18,16 @@ const zero = document.getElementById("zero");
 const coln = document.getElementById("coln");
 const eql = document.getElementById("eql");
 const clear = document.getElementById("clr")
-let process = document.getElementById("process");
+let process = document.querySelector(".process");
 let result = document.getElementById("result");
 let processArr = [];
+
 
 function displayClear () {
     processArr = [];
     process.textContent = 0;
-    result.textContent = 0;
+    result.textContent = "";
+    process.classList.remove("process-animate")
 }
 
 function operatorDisplay (operator) {
@@ -42,9 +44,13 @@ function operatorDisplay (operator) {
 displayClear();
 
 eql.addEventListener('click', function () {
-    let str = eval(processArr.join(""));
-    result.textContent = str;
-    console.log(str);
+    if(result.textContent !== 0) {
+        let str = eval(processArr.join(""));
+        process.classList.add("process-animate");
+        result.textContent = str;
+        console.log(str);
+    }
+    
 });
 
 del.addEventListener('click', function () {

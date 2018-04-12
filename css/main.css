@@ -3,8 +3,8 @@
 
 button {
   border-top: none;
-  border-right: 1px solid #D32F2F;
-  border-bottom: 1px solid #D32F2F;
+  border-right: 1px solid #eb6562;
+  border-bottom: 1px solid #eb6562;
   border-left: none;
   font-family: "Helvetica", "Arial";
   font-size: 25px;
@@ -17,17 +17,26 @@ button {
   margin-right: -4px;
   /*To remove space between HTML button tags*/
   background-color: #E53935;
-  outline: none; }
+  outline: none;
+  transition: background-color 0.5s; }
 
 button:hover {
-  background-color: #D32F2F;
+  background-color: #e2231e;
   cursor: pointer; }
 
+button:active {
+  background-color: #b61b17;
+  transition: background-color 0s; }
+
 #eql {
-  background-color: #B71C1C; }
+  background-color: #b61b17; }
 
 #eql:hover {
-  background-color: #9a1818; }
+  background-color: #891412; }
+
+#eql:active {
+  background-color: #5c0e0c;
+  transition: background-color 0s; }
 
 .fifth-row button {
   border-bottom: none; }
@@ -36,29 +45,38 @@ button:nth-last-child(1) {
   border-right: none; }
 
 .display-wrap {
-  width: 240px; }
+  width: 240px;
+  background-color: #FAFAFA; }
 
-#process {
+.process {
   font-family: "Helvetica", "Arial";
   font-size: 25px;
   font-style: normal;
   color: #FAFAFA;
-  color: #B71C1C;
+  color: #b61b17;
   background-color: #FAFAFA;
-  text-align: center;
   height: 40px;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   text-align: right;
-  padding: 0 25px; }
+  padding: 0 25px;
+  position: relative;
+  top: 45px;
+  font-size: 35px; }
+
+.process-animate {
+  position: static;
+  top: 0;
+  font-size: 25px;
+  transition: transform 150ms ease-out, font-size 150ms ease-out; }
 
 #result {
   font-family: "Helvetica", "Arial";
   font-size: 25px;
   font-style: normal;
   color: #FAFAFA;
-  color: #B71C1C;
+  color: #b61b17;
   background-color: #FAFAFA;
   text-align: center;
   height: 60px;
