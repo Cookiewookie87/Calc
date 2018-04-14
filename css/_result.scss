@@ -16,7 +16,7 @@
     top: 45px;
     font-size: 35px;
     font-weight: bold;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 .result{
     @include type();
@@ -34,7 +34,7 @@
 }
 .result-show{
     top: 0;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
-    transition: 0.2s;
+    transition: 0.1s;
 }
