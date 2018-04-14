@@ -3,8 +3,8 @@
 
 button {
   border-top: none;
-  border-right: 1px solid #eb6562;
-  border-bottom: 1px solid #eb6562;
+  border-right: 1px solid #D32F2F;
+  border-bottom: 1px solid #D32F2F;
   border-left: none;
   font-family: "Helvetica", "Arial";
   font-size: 25px;
@@ -17,26 +17,17 @@ button {
   margin-right: -4px;
   /*To remove space between HTML button tags*/
   background-color: #E53935;
-  outline: none;
-  transition: background-color 0.5s; }
+  outline: none; }
 
 button:hover {
-  background-color: #e2231e;
+  background-color: #D32F2F;
   cursor: pointer; }
 
-button:active {
-  background-color: #b61b17;
-  transition: background-color 0s; }
-
 #eql {
-  background-color: #b61b17; }
+  background-color: #B71C1C; }
 
 #eql:hover {
-  background-color: #891412; }
-
-#eql:active {
-  background-color: #5c0e0c;
-  transition: background-color 0s; }
+  background-color: #9a1818; }
 
 .fifth-row button {
   border-bottom: none; }
@@ -53,8 +44,8 @@ button:nth-last-child(1) {
   font-size: 25px;
   font-style: normal;
   color: #FAFAFA;
-  color: #b61b17;
-  background-color: #FAFAFA;
+  color: #B71C1C;
+  text-align: center;
   height: 40px;
   display: flex;
   justify-content: flex-end;
@@ -63,20 +54,16 @@ button:nth-last-child(1) {
   padding: 0 25px;
   position: relative;
   top: 45px;
-  font-size: 35px; }
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.2s; }
 
-.process-animate {
-  position: static;
-  top: 0;
-  font-size: 25px;
-  transition: transform 150ms ease-out, font-size 150ms ease-out; }
-
-#result {
+.result {
   font-family: "Helvetica", "Arial";
   font-size: 25px;
   font-style: normal;
   color: #FAFAFA;
-  color: #b61b17;
+  color: #B71C1C;
   background-color: #FAFAFA;
   text-align: center;
   height: 60px;
@@ -87,6 +74,12 @@ button:nth-last-child(1) {
   flex-direction: column;
   text-align: right;
   padding: 5px 25px 0 25px; }
+
+.result-show {
+  top: 0;
+  font-size: 20px;
+  font-weight: normal;
+  transition: 0.2s; }
 
 * {
   padding: 0;

@@ -4,8 +4,8 @@
 }
 .process{
     @include type();
-    color: darken($redish, 15%);
-    background-color: $white;
+    color: $dark-red;
+    text-align: center;
     height: 40px;
     display: flex;
     justify-content: flex-end;
@@ -15,16 +15,12 @@
     position: relative;
     top: 45px;
     font-size: 35px;
+    font-weight: bold;
+    transition: 0.2s;
 }
-.process-animate{
-    position: static;
-    top: 0;
-    font-size: 25px;
-    transition: transform 150ms ease-out, font-size 150ms ease-out;
-}
-#result{
+.result{
     @include type();
-    color: darken($redish, 15%);
+    color: $dark-red;
     background-color: $white;
     text-align: center;
     height: 60px;
@@ -35,4 +31,10 @@
     flex-direction: column;
     text-align: right;
     padding: 5px 25px 0 25px;
+}
+.result-show{
+    top: 0;
+    font-size: 20px;
+    font-weight: normal;
+    transition: 0.2s;
 }

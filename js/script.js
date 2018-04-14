@@ -19,15 +19,13 @@ const coln = document.getElementById("coln");
 const eql = document.getElementById("eql");
 const clear = document.getElementById("clr")
 let process = document.querySelector(".process");
-let result = document.getElementById("result");
+let result = document.querySelector(".result");
 let processArr = [];
-
 
 function displayClear () {
     processArr = [];
     process.textContent = 0;
     result.textContent = "";
-    process.classList.remove("process-animate")
 }
 
 function operatorDisplay (operator) {
@@ -44,13 +42,9 @@ function operatorDisplay (operator) {
 displayClear();
 
 eql.addEventListener('click', function () {
-    if(result.textContent !== 0) {
-        let str = eval(processArr.join(""));
-        process.classList.add("process-animate");
-        result.textContent = str;
-        console.log(str);
-    }
-    
+    let str = eval(processArr.join(""));
+    result.textContent = str;
+    process.classList.add("result-show");
 });
 
 del.addEventListener('click', function () {
@@ -60,6 +54,7 @@ del.addEventListener('click', function () {
 
 clear.addEventListener('click', function () {
     displayClear();
+    process.classList.remove("result-show");
 });
 
 parR.addEventListener('click', function () {
