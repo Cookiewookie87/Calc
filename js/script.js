@@ -30,7 +30,7 @@ function displayClear () {
 
 function operatorDisplay (operator) {
     if (processArr.length === 0) {
-        processArr.push(0);
+        processArr.push("0");
         processArr.push(operator);
         process.textContent = processArr.join("");
     } else {
@@ -42,6 +42,9 @@ function operatorDisplay (operator) {
 displayClear();
 
 eql.addEventListener('click', function () {
+    for (i = 0; i < processArr.length; i++) {
+        processArr[i] = processArr[i].replace("×", "*");
+    }
     let str = eval(processArr.join(""));
     result.textContent = str;
     process.classList.add("result-show");
@@ -78,7 +81,7 @@ divide.addEventListener('click', function () {
 });
 
 mul.addEventListener('click', function () {
-    operatorDisplay("*")
+    operatorDisplay("×")
 });
 
 minus.addEventListener('click', function () {
@@ -90,54 +93,54 @@ coln.addEventListener('click', function () {
 });
 
 zero.addEventListener('click', function () {
-    if (processArr.length !== 0) {
-        processArr.push(0);
+    if (processArr.length !== "0") {
+        processArr.push("0");
         process.textContent = processArr.join("");
     }
 });
 
 one.addEventListener('click', function () {
-    processArr.push(1);
+    processArr.push("1");
     process.textContent = processArr.join("");
 });
 
 two.addEventListener('click', function () {
-    processArr.push(2);
+    processArr.push("2");
     process.textContent = processArr.join("");
 });
 
 three.addEventListener('click', function () {
-    processArr.push(3);
+    processArr.push("3");
     process.textContent = processArr.join("");
 });
 
 four.addEventListener('click', function () {
-    processArr.push(4);
+    processArr.push("4");
     process.textContent = processArr.join("");
 });
 
 five.addEventListener('click', function () {
-    processArr.push(5);
+    processArr.push("5");
     process.textContent = processArr.join("");
 });
 
 six.addEventListener('click', function () {
-    processArr.push(6);
+    processArr.push("6");
     process.textContent = processArr.join("");
 });
 
 seven.addEventListener('click', function () {
-    processArr.push(7);
+    processArr.push("7");
     process.textContent = processArr.join("");
 });
 
 eight.addEventListener('click', function () {
-    processArr.push(8);
+    processArr.push("8");
     process.textContent = processArr.join("");
 });
 
 nine.addEventListener('click', function () {
-    processArr.push(9);
+    processArr.push("9");
     process.textContent = processArr.join("");
 });
 
